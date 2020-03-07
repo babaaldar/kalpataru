@@ -24,15 +24,12 @@
                     <div class="col-sm-6">
                         <h1>View Patient</h1>
                     </div>
-
                 </div>
             </div><!-- /.container-fluid -->
         </section>
-
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-
                 <!-- Small boxes (Stat box) -->
                 <!--                <div class="container-fluid">-->
                 <!--                    <div class="row mb-2">-->
@@ -51,7 +48,6 @@
                             <!-- form start -->
                             <form id="quickForm" role="form">
                                 <div class="card-body">
-
                                     <table id="example1" class="table table-bordered table-head-fixed table-striped">
                                         <thead>
                                         <tr>
@@ -60,16 +56,15 @@
                                             <th>Aadhar No.</th>
                                             <th>Patient Name</th>
                                             <th>View Detail</th>
-
+                                            <th>Update Detail</th>
                                         </tr>
                                         <tbody>
                                         <?php
 
                                         $profilerootpath="include/profile/";
-                                        $res_pending = mysqli_query($con, "SELECT * FROM patient_details");
+                                        $res_pending = mysqli_query($con, "SELECT * FROM patient_details order by pid desc");
 
-                                        while ($row = mysqli_fetch_assoc($res_pending)) {
-
+                                        while ($row = mysqli_fetch_assoc($res_pending)) {                                            
                                             $checkbox1 = '';
                                             $checkbox2 = '';
                                             $checkbox3 = '';
@@ -126,7 +121,7 @@
                                                     <div class=\"card-body\">
                                                       <div class=\"form-group\">
                                                         <label for=\"profile\">Profile Photo</label>
-                                                         <img src='".$profilerootpath.$row['profile']."' class=\"form-control\" id=\"profile\" name=\"profile\"
+                                                         <img src='".$profilerootpath.$row['profile_p']."' class=\"form-control\" id=\"profile\" name=\"profile\"
                                                          type=\"file\" style=\"width:100px;height:100px;\">
                                                       </div>
                                                       <div class=\"form-group\">
@@ -359,7 +354,8 @@
       <!-- /.modal -->
 
 												
-											</td>";
+                                            </td>";
+                echo "<td> <a href='updatePatient.php?pid=".$row['pid']."'>Update</a></td>";
 
                                         }
                                         ?>

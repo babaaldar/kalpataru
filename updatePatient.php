@@ -23,13 +23,53 @@ include("include/connection.php");
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Add Patient</h1>
+                        <h1>Update Patient</h1>
                     </div>
-
                 </div>
             </div><!-- /.container-fluid -->
         </section>
+        <?php
+         $profilerootpath="include/profile/";
+         $pid=$_GET['pid'];
+         $sql_query="SELECT * FROM patient_details where pid='$pid'";
+         $res_update = mysqli_query($con, $sql_query);
+         while ($row = mysqli_fetch_assoc($res_update)) {
+            
+            $old_profile_photo=$row['profile_p'];
+            
+            $checkbox1 = '';
+            $checkbox2 = '';
+            $checkbox3 = '';
+            $checkbox4 = '';
+            $checkbox5 = '';
+            $checkbox6 = '';
 
+             
+            if (!empty($row['bpcheckbox'])) {
+                $checkbox1 = "checked";
+            }
+
+            if (!empty($row['sugarcheckbox'])) {
+                $checkbox2 = "checked";
+            }
+
+            if (!empty($row['heartcheckbox'])) {
+                $checkbox3 = "checked";
+            }
+
+
+            if (!empty($row['kidneycheckbox'])) {
+                $checkbox4 = "checked";
+            }
+
+            if (!empty($row['paralysischeckbox'])) {
+                $checkbox5 = "checked";
+            }
+
+            if (!empty($row['thyroidcheckbox'])) {
+                $checkbox6 = "checked";
+            }
+        ?>
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
@@ -57,26 +97,33 @@ include("include/connection.php");
                                     <div class="form-group">
                                         <label for="uhidno">UHID Number *</label>
                                         <input class="form-control" id="uhidno" name="uhidno"
-                                               placeholder="Enter UH ID Number" type="text" required>
+                                        value="<?php echo $row['uhidno']?>" placeholder="Enter UH ID Number" type="text" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="ssano">SSA Number</label>
                                         <input class="form-control" id="ssano" name="ssano"
-                                               placeholder="Enter SSA Number" type="text">
+                                        value="<?php echo $row['ssano']?>" placeholder="Enter SSA Number" type="text">
                                     </div>
-
-
                                     <div class="form-group">
                                         <label for="adharnumber">Aadhar Number</label>
                                         <input class="form-control" id="adharnumber" min="0" name="adharnumber"
-                                               placeholder="Enter Aadhar Number"
+                                        value="<?php echo $row['adharnumber']?>" placeholder="Enter Aadhar Number"
                                                type="number">
                                     </div>
-
-                                    <div class="form-group" style="position: relative; overflow: hidden; display: inline-block;">
-                                        <label for="profile">Profile Photo</label>
-                                        <input class="form-control" id="profile" min="0" name="profile"
-                                               placeholder="Upload photo" type="file" accept="image/*">
+                                    <div class="row">
+                                       <div class="col-sm-3">
+                                          <div class="form-group">
+                                              <img src="<?php echo $profilerootpath.$row['profile_p']?>" class="form-control" id="profile1" name="profile1" 
+                                                type="file" style="margin-left: auto; margin-right: auto; width:100px;height:100px;">
+                                         </div>
+                                       </div>
+                                       <div class="col-sm-9">
+                                          <div class="form-group">                      
+                                             <label for="profile">Profile photo</label>                       
+                                             <input class="form-control" id="profile" min="0" name="profile"
+                                             placeholder="Upload photo" type="file" accept="image/*">
+                                           </div>
+                                        </div>
                                     </div>
 
                                     <div class="row">
@@ -84,7 +131,7 @@ include("include/connection.php");
                                             <div class="form-group">
                                                 <label for="patientname">Name *</label>
                                                 <input class="form-control" id="patientname" name="patientname"
-                                                       placeholder="Enter Patient Name"
+                                                value="<?php echo $row['patientname']?>" placeholder="Enter Patient Name"
                                                        type="text" required>
                                             </div>
                                         </div>
@@ -92,7 +139,7 @@ include("include/connection.php");
                                             <div class="form-group">
                                                 <label for="patientphone">Phone Number</label>
                                                 <input class="form-control" id="patientphone" name="patientphone"
-                                                       placeholder="Enter Phone Number"
+                                                value="<?php echo $row['patientphone']?>" placeholder="Enter Phone Number"
                                                        type="number">
                                             </div>
                                         </div>
@@ -103,7 +150,7 @@ include("include/connection.php");
                                             <div class="form-group">
                                                 <label for="patientage">Age</label>
                                                 <input class="form-control" id="patientage" name="patientage"
-                                                       placeholder="Enter Age"
+                                                value="<?php echo $row['patientage']?>" placeholder="Enter Age"
                                                        type="text">
                                             </div>
                                         </div>
@@ -113,19 +160,18 @@ include("include/connection.php");
                                                 <label for="patientgender">Gender</label>
                                                 <select class="form-control" id="patientgender" name="patientgender">
                                                     <option value="">Select</option>
-                                                    <option value="Male">Male</option>
-                                                    <option value="Female">Female</option>
-                                                    <option value="Other">Other</option>
+                                                    <option value="Male" <?php if($row['patientgender']=="Male") echo "selected"; ?>>Male</option>
+                                                    <option value="Female" <?php if($row['patientgender']=="Female") echo "selected"; ?>>Female</option>
+                                                    <option value="Other" <?php if($row['patientgender']=="Other") echo "selected"; ?>>Other</option>
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div>        
                                     </div>
                                     <div class="form-group">
                                         <label for="patientaddress">Address</label>
                                         <textarea class="form-control" id="patientaddress"
                                                   name="patientaddress" placeholder="Enter Address"
-                                                  rows="4"
-                                        ></textarea>
+                                                  rows="4"><?php echo $row['patientaddress']?></textarea>
                                     </div>
 
                                     <div class="form-group">
@@ -133,7 +179,7 @@ include("include/connection.php");
                                         <textarea class="form-control" id="patientsymptoms"
                                                   name="patientsymptoms" placeholder="Enter Sympotoms"
                                                   rows="4"
-                                        ></textarea>
+                                        ><?php echo $row['patientsymptoms']?></textarea>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
@@ -141,7 +187,7 @@ include("include/connection.php");
                                                 <div class="custom-control custom-checkbox">
                                                     <input class="custom-control-input" id="bpcheckbox"
                                                            name="bpcheckbox" type="checkbox"
-                                                           value="bp">
+                                                           value="bp" <?php echo $checkbox1 ?>>
                                                     <label class="custom-control-label" for="bpcheckbox">BP</label>
                                                 </div>
                                             </div>
@@ -149,7 +195,7 @@ include("include/connection.php");
                                                 <div class="custom-control custom-checkbox">
                                                     <input class="custom-control-input" id="sugarcheckbox"
                                                            name="sugarcheckbox" type="checkbox"
-                                                           value="sugar">
+                                                           value="sugar" <?php echo $checkbox2 ?>>
                                                     <label class="custom-control-label"
                                                            for="sugarcheckbox">Sugar</label>
                                                 </div>
@@ -158,7 +204,7 @@ include("include/connection.php");
                                                 <div class="custom-control custom-checkbox">
                                                     <input class="custom-control-input" id="heartcheckbox"
                                                            name="heartcheckbox" type="checkbox"
-                                                           value="heart">
+                                                           value="heart" <?php echo $checkbox3 ?>>
                                                     <label class="custom-control-label"
                                                            for="heartcheckbox">Heart</label>
                                                 </div>
@@ -167,7 +213,7 @@ include("include/connection.php");
                                                 <div class="custom-control custom-checkbox">
                                                     <input class="custom-control-input" id="kidneycheckbox"
                                                            name="kidneycheckbox" type="checkbox"
-                                                           value="heart">
+                                                           value="heart" <?php echo $checkbox4 ?>>
                                                     <label class="custom-control-label"
                                                            for="kidneycheckbox">Kidney</label>
                                                 </div>
@@ -177,7 +223,7 @@ include("include/connection.php");
                                                     <input class="custom-control-input" id="paralysischeckbox"
                                                            name="paralysischeckbox"
                                                            type="checkbox"
-                                                           value="heart">
+                                                           value="heart" <?php echo $checkbox5 ?>>
                                                     <label class="custom-control-label" for="paralysischeckbox">Paralysis</label>
                                                 </div>
                                             </div>
@@ -186,7 +232,7 @@ include("include/connection.php");
                                                     <input class="custom-control-input" id="thyroidcheckbox"
                                                            name="thyroidcheckbox"
                                                            type="checkbox"
-                                                           value="heart">
+                                                           value="heart" <?php echo $checkbox6 ?>>
                                                     <label class="custom-control-label"
                                                            for="thyroidcheckbox">Thyroid</label>
                                                 </div>
@@ -201,14 +247,14 @@ include("include/connection.php");
                                                 <select class="form-control" id="patientbloodgroup"
                                                         name="patientbloodgroup">
                                                     <option value="">Select</option>
-                                                    <option value="A+">A+</option>
-                                                    <option value="A-">A-</option>
-                                                    <option value="B+">B+</option>
-                                                    <option value="B-">B-</option>
-                                                    <option value="AB+">AB+</option>
-                                                    <option value="AB-">AB-</option>
-                                                    <option value="O+">O+</option>
-                                                    <option value="O-">O-</option>
+                                                    <option value="A+" <?php if($row['patientbloodgroup']=="A+") echo "selected"; ?>>A+</option>
+                                                    <option value="A-" <?php if($row['patientbloodgroup']=="A-") echo "selected"; ?>>A-</option>
+                                                    <option value="B+" <?php if($row['patientbloodgroup']=="B+") echo "selected"; ?>>B+</option>
+                                                    <option value="B-" <?php if($row['patientbloodgroup']=="B-") echo "selected"; ?>>B-</option>
+                                                    <option value="AB+" <?php if($row['patientbloodgroup']=="AB+") echo "selected"; ?>>AB+</option>
+                                                    <option value="AB-" <?php if($row['patientbloodgroup']=="AB-") echo "selected"; ?>>AB-</option>
+                                                    <option value="O+" <?php if($row['patientbloodgroup']=="O+") echo "selected"; ?>>O+</option>
+                                                    <option value="O-" <?php if($row['patientbloodgroup']=="O-") echo "selected"; ?>>O-</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -216,7 +262,7 @@ include("include/connection.php");
                                             <div class="form-group">
                                                 <label for="patienthb">Hb</label>
                                                 <input class="form-control" id="patienthb" name="patienthb"
-                                                       placeholder="Enter Patient HB"
+                                                value="<?php echo $row['patienthb']?>" placeholder="Enter Patient HB"
                                                        type="text">
                                             </div>
                                         </div>
@@ -227,7 +273,7 @@ include("include/connection.php");
                                             <div class="form-group">
                                                 <label for="patientkft">KFT</label>
                                                 <input class="form-control" id="patientkft" name="patientkft"
-                                                       placeholder="Enter Details"
+                                                value="<?php echo $row['patientkft']?>" placeholder="Enter Details"
                                                        type="text">
                                             </div>
                                         </div>
@@ -236,7 +282,7 @@ include("include/connection.php");
                                             <div class="form-group">
                                                 <label for="patientecg">ECG</label>
                                                 <input class="form-control" id="patientecg" name="patientecg"
-                                                       placeholder="Enter Details"
+                                                value="<?php echo $row['patientecg']?>" placeholder="Enter Details"
                                                        type="text">
                                             </div>
                                         </div>
@@ -244,7 +290,7 @@ include("include/connection.php");
                                             <div class="form-group">
                                                 <label for="patienteco">ECHO</label>
                                                 <input class="form-control" id="patienteco" name="patienteco"
-                                                       placeholder="Enter Details"
+                                                value="<?php echo $row['patienteco']?>" placeholder="Enter Details"
                                                        type="text">
                                             </div>
                                         </div>
@@ -254,21 +300,21 @@ include("include/connection.php");
                                         <textarea class="form-control" id="patientdiagnosis"
                                                   name="patientdiagnosis" placeholder="Enter Details"
                                                   rows="4"
-                                        ></textarea>
+                                        ><?php echo $row['patientdiagnosis']?></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="patienttreatment">Treatment</label>
                                         <textarea class="form-control" id="patienttreatment"
                                                   name="patienttreatment" placeholder="Enter Details"
                                                   rows="4"
-                                        ></textarea>
+                                        ><?php echo $row['patienttreatment']?></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="patientpriscription">Plan</label>
                                         <textarea class="form-control" id="patientpriscription"
                                                   name="patientpriscription" placeholder="Enter Details"
                                                   rows="4"
-                                        ></textarea>
+                                        ><?php echo $row['patientpriscription']?></textarea>
                                     </div>
 
                                     <div class="form-group">
@@ -276,14 +322,13 @@ include("include/connection.php");
                                         <textarea class="form-control" id="patientspecialadvise"
                                                   name="patientspecialadvise" placeholder="Enter Details"
                                                   rows="4"
-                                        ></textarea>
+                                        ><?php echo $row['patientspecialadvise']?></textarea>
                                     </div>
 
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
-                                    <input class="btn btn-primary" type="submit" value="Add Patient" name="add_patient">
-                                    <button class="btn btn-primary" type="reset" value="Reset">Clear</button>
+                                    <input class="btn btn-primary" type="submit" value="Update Patient" name="update_patient">
                                 </div>
                             </form>
                         </div>
@@ -293,6 +338,7 @@ include("include/connection.php");
 
             </div><!-- /.container-fluid -->
         </section>
+         <?php } ?>
         <!-- /.content -->
     </div>
 
@@ -332,12 +378,17 @@ include "include/javascripts.php";
 </script>
 
 <?php
-if (isset($_POST['add_patient'])) {
+if (isset($_POST['update_patient'])) {
+
+    //$sql_query_photo="SELECT profile_p from `patient_details` where pid='$pid'";
+    //mysqli_query($con, $sql_query_photo)
+
+
     $uhidno = $_POST['uhidno'];
     $ssano = $_POST['ssano'];
     $adharnumber = $_POST['adharnumber'];
 
-      $profile = time().'_'.basename($_FILES['profile']['name']);
+      
       $tmpFilePath = basename($_FILES['profile']['tmp_name']);
       $target_dir = "include/profile/";
       $target_file = $target_dir.time().'_'. basename($_FILES["profile"]["name"]);
@@ -345,19 +396,20 @@ if (isset($_POST['add_patient'])) {
       if($tmpFilePath != ""){
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "JPG" && $imageFileType != "PNG" && $imageFileType != "JPEG" && $imageFileType != "GIF" ) {
                 echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed."; 
-                $profile='default.png';
+                $profile=$old_profile_photo;
                 }
             else{
                 if(move_uploaded_file($_FILES["profile"]["tmp_name"], $target_file)){
+                $profile = time().'_'.basename($_FILES['profile']['name']);
                 echo "<alert>The Patient got added";
                 }
                 else{
-                    echo "The Pofile file is not image";
+                    echo "The Pofile file is not uploaded";
                 }
              }
          }
          else{
-            $profile='default.png';
+            $profile=$old_profile_photo;
          }
     $patientname = $_POST['patientname'];
     $patientphone = $_POST['patientphone'];
@@ -418,15 +470,10 @@ if (isset($_POST['add_patient'])) {
     $patientpriscription = $_POST['patientpriscription'];
     $patientspecialadvise = $_POST['patientspecialadvise'];
 
-    $query = "INSERT INTO `patient_details` 
-(`uhidno`, `ssano`, `adharnumber`,`profile_p`, `patientname`, `patientphone`, `patientage`, `patientgender`, `patientaddress`, `patientsymptoms`, `bpcheckbox`, `sugarcheckbox`, `heartcheckbox`, `kidneycheckbox`, `paralysischeckbox`, `thyroidcheckbox`, `patientdiagnosis`, `patientbloodgroup`, `patienthb`, `patientkft`, `patientecg`, `patienteco`, `patienttreatment`, `patientpriscription`, `patientspecialadvise`) 
-VALUES
-('$uhidno', '$ssano', '$adharnumber', '$profile', '$patientname', '$patientphone', '$patientage', '$patientgender', '$patientaddress', '$patientsymptoms', '$bpcheckbox', '$sugarcheckbox', '$heartcheckbox', '$kidneycheckbox', '$paralysischeckbox', '$thyroidcheckbox', '$patientdiagnosis', '$patientbloodgroup', '$patienthb', '$patientkft', '$patientecg','$patienteco', '$patienttreatment', '$patientpriscription', '$patientspecialadvise');
-";
-
+    $query = "UPDATE `patient_details` SET uhidno = '$uhidno', ssano = '$ssano', adharnumber = '$adharnumber', profile_p = '$profile', patientname ='$patientname', patientphone ='$patientphone', patientage ='$patientage', patientgender = '$patientgender', patientaddress = '$patientaddress', patientsymptoms = '$patientsymptoms', bpcheckbox ='$bpcheckbox', sugarcheckbox ='$sugarcheckbox', heartcheckbox ='$heartcheckbox', kidneycheckbox ='$kidneycheckbox', paralysischeckbox ='$paralysischeckbox', thyroidcheckbox = '$thyroidcheckbox', patientdiagnosis = '$patientdiagnosis', patientbloodgroup = '$patientbloodgroup', patienthb ='$patienthb', patientkft ='$patientkft', patientecg ='$patientecg', patienteco ='$patienteco', patienttreatment ='$patienttreatment', patientpriscription ='$patientpriscription', patientspecialadvise ='$patientspecialadvise' where pid='$pid'";
     if(mysqli_query($con, $query))
     {
-        echo "<script>alert('Patient details added successfully');</script>";
+        echo "<script>alert('Patient details Updated successfully');</script>";
         header("Location: view_patient.php");
     }
     else{

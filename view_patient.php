@@ -56,7 +56,8 @@
                                             <th>Aadhar No.</th>
                                             <th>Patient Name</th>
                                             <th>View Detail</th>
-                                            <th>Update Detail</th>
+                                            <th>Update Patient</th>
+                                            <th>Delete Patient</th>
                                         </tr>
                                         <tbody>
                                         <?php
@@ -106,7 +107,7 @@
                                             echo "<td>" . $row['patientname'] . "</td>";
 
                                             echo "<td>";
-                                            echo "<button type='button' class='btn btn-link' data-toggle = 'modal' data-target = '#studentdetails-" . $row['pid'] . "'> View </button>
+                                            echo "<button type='button' class='btn btn-link btn-danger btn-block' data-toggle = 'modal' data-target = '#studentdetails-" . $row['pid'] . "' style='color: white'> View </button>
 											<div class=\"modal fade\" id='studentdetails-" . $row['pid'] . "'>
                                              <div class=\"modal-dialog modal-lg\">
                                               <div class=\"modal-content\">
@@ -355,8 +356,9 @@
 
 												
                                             </td>";
-                echo "<td> <a href='updatePatient.php?pid=".$row['pid']."'>Update</a></td>";
-
+                echo "<td> <a href='updatePatient.php?pid=".$row['pid']."' class=\"btn btn-danger btn-block\" style=\"color: white\">Update</a></td>";
+                echo "<td> <a herf=\"#\" class=\"btn btn-danger btn-block\" style=\"color: white\"  name=".$row['pid']." onClick=\"scrollToBottom(event)\">Delete</a></td>"; 
+                                            
                                         }
                                         ?>
 
@@ -388,14 +390,52 @@
     </aside>
 </div>
 
-
-<?php
-include "include/javascripts.php";
-?>
-
 <script src="./include/plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="./include/plugins/jquery-validation/additional-methods.min.js"></script>
 
+<!--   Core JS Files   -->
+<script src="assets/js/core/jquery.min.js"></script>
+<script src="assets/js/core/popper.min.js"></script>
+<script src="assets/js/core/bootstrap-material-design.min.js"></script>
+<script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<!-- Plugin for the momentJs  -->
+<script src="assets/js/plugins/moment.min.js"></script>
+<!--  Plugin for Sweet Alert -->
+<script src="assets/js/plugins/sweetalert2.js"></script>
+<!-- Forms Validations Plugin -->
+<script src="assets/js/plugins/jquery.validate.min.js"></script>
+<!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+<script src="assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="assets/js/plugins/bootstrap-selectpicker.js"></script>
+<!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+<script src="assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+<!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+<script src="assets/js/plugins/jquery.dataTables.min.js"></script>
+<!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="assets/js/plugins/bootstrap-tagsinput.js"></script>
+<!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
+<!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+<script src="assets/js/plugins/fullcalendar.min.js"></script>
+<!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+<script src="assets/js/plugins/jquery-jvectormap.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="assets/js/plugins/nouislider.min.js"></script>
+<!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<!-- Library for adding dinamically elements -->
+<script src="assets/js/plugins/arrive.min.js"></script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!-- Chartist JS -->
+<script src="assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<script src="assets/demo/demo.js"></script>
 <script>
     $(function () {
 
@@ -409,8 +449,42 @@ include "include/javascripts.php";
             "autoWidth": false,
         });
     });
+    
+    function scrollToBottom(event) {
 
+    var pid = event.target.name;
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.value) {
+            $.ajax({
+                type: 'POST',
+                url: 'deletePatient.php',
+                data: {patientid: pid}
+            }).done(function (data) {
+                console.log(data);
+                if (data == "error") {
+                    swal("Error!", "Erro occur try again!", "error");
+                } else {
+                    swal("Deleted!", "Patient Successfully deleted!", "success");
+                    setTimeout(function () {
+                        window.location.href = "view_patient.php";
+                    }, 1000);
+                }
+            }).fail(function () {
+                alert("Error occur. Try again later");
+            });
 
+        }
+    })
+    }
 </script>
+
 </body>
 </html>

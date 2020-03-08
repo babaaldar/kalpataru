@@ -57,7 +57,7 @@ include("include/connection.php");
                                     <div class="form-group">
                                         <label for="uhidno">UHID Number *</label>
                                         <input class="form-control" id="uhidno" name="uhidno"
-                                               placeholder="Enter UH ID Number" type="text" required>
+                                               placeholder="Enter UHID Number" type="text" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="ssano">SSA Number</label>

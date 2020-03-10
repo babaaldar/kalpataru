@@ -426,12 +426,12 @@ VALUES
 
     if(mysqli_query($con, $query))
     {
-        echo "<script>alert('Patient details added successfully');</script>";
-        header("Location: view_patient.php");
+        //echo "<script>alert('Patient details added successfully');</script>";
+        //header("Location: addpatient.php");
     }
     else{
-        echo '<script>alert("Welcome to Geeks for Geeks");</script>';
-        header("Location: addpatient.php");
+        //echo '<script>alert("Welcome to Geeks for Geeks");</script>';
+        //header("Location: addpatient.php");
     }
 
 }

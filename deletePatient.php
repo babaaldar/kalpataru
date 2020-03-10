@@ -1,6 +1,5 @@
 <?php
     include "include/connection.php";
-    include "include/connection.php";
     include "include/html_head.php";
     include "include/checkuser.php";
     include "include/footer.php";
@@ -10,8 +9,13 @@
     
     if (isset($_POST['patientid'])) {
         $pid1=$_POST['patientid'];
-      $sql_delete="DELETE FROM patient_details where pid='".$pid1."'";
-      mysqli_query($con, $sql_delete);
+                    $sql_delete="DELETE FROM patient_details where pid='".$pid1."'";
+            if(mysqli_query($con, $sql_delete)){
+              echo "Deleted Successfully";
+            }
+            else{
+              echo "Not Deleted";
+            }
     }
     else {
       echo "error";

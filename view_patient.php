@@ -355,7 +355,7 @@
 												
                                             ";
                 echo "<a href='updatePatient.php?pid=".$row['pid']."' title=\"Update\" class=\"btn\"><span style=\"color:green;\"> <i class=\"fa fa-edit\"></i></span></a>";
-                echo "<a href=\"#\" class=\"btn\" name=".$row['pid']." title=\"Delete\" onClick=\"scrollToBottom(event)\"><span style=\"color:red;\"><i class=\"fa fa-trash\"></i></span></a></td>"; 
+                echo "<a href=\"#\" class=\"fa fa-trash btn-block\" style=\"color:red; margin:08px; padding:05px; padding-top:15px; display:inline;\" name=".$row['pid']." onClick=\"scrollToBottom(event)\" title=\"Delete\"></a></td>"; 
                                             
                                         }
                                         ?>

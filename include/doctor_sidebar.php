@@ -41,7 +41,7 @@
                 </li>
                 <li class="nav-item">
                     <a href=" ./view_patient.php" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-eye"></i>
                         <p>
                             View Patient
                         </p>
@@ -50,7 +50,7 @@
 
                 <li class="nav-item">
                     <a href="./addpatient.php" class="nav-link ">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-plus-square"></i>
                         <p>
                             Add Patient
                             <!--                            <i class="right fas fa-angle-left"></i>-->

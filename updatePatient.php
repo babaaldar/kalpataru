@@ -329,6 +329,7 @@ include("include/connection.php");
                                 <!-- /.card-body -->
                                 <div class="card-footer">
                                     <input class="btn btn-primary" type="submit" value="Update Patient" name="update_patient">
+                                    <a class="btn btn-primary" style="background-color:red" href="view_patient.php">Cancel</a>
                                 </div>
                             </form>
                         </div>

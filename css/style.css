@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto',sans-serif;
+}
+
+.d-none{
+    display: none;
+}
+.read-more:active .more-content{
+    display: block;
+}
+
+.rel{
+    position: relative;
+}
+/*********************** 
+    HELPER CLASSES
+************************/
+.p-0{
+    padding: 0!important;
+}
+
+.p-100{
+    padding: 100px!important;
+}
+
+.p-t-0{
+    padding-top: 0!important;
+}
+.p-t-100{
+    padding-top: 100px!important;
+}
+
+.p-t-30{
+    padding-top: 30px!important;
+}
+.p-b-0{
+    padding-bottom: 0!important;
+}
+.p-b-100{
+    padding-bottom: 100px!important;
+}
+
+.m-b-0{
+    margin-bottom: 0px!important;
+}
+.m-b-30{
+    margin-bottom: 30px!important;
+}
+.m-b-50{
+    margin-bottom: 50px!important;
+}
+.m-b-20{
+    margin-bottom: 20px!important;
+}
+.m-b-10{
+    margin-bottom: 10px!important;
+}
+.m-b-50{
+    margin-bottom: 50px!important;
+}
+.m-b-100{
+    margin-bottom: 100px!important;
+}
+.m-b-150{
+    margin-bottom: 150px!important;
+}
+
+.m-t-0{
+    margin-top: 0px!important;
+}
+.m-t-70{
+    margin-top: 70px!important;
+}
+.m-t-30{
+    margin-top: 30px!important;
+}
+.m-t-50{
+    margin-top: 50px!important;
+}
+.m-50{
+    margin: 50px!important;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    margin: 0.5rem;
+    padding: 0.5rem;
+
+}
+.card img{
+        width: 100%;
+}
+        
+.cards{
+            
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+
+}
+hr{
+    height: 1px;
+    border: none;
+    background: #000;
+}
+
+
+
+
+.logo{
+    width: 70px;
+    height: 70px;
+}
+.logo img{
+    padding: 0;
+    width: 100%;
+}
+
+/*************************************************************
+                    HERO                                     
+*************************************************************/
+
+#wrapper{
+     /* background: url('../kalpataru/include/dist/img/bgimg.jpeg')no-repeat center; */
+    height: 100vh;
+/*    width: 100vw;*/
+    background-size: cover;
+/*    position: relative;*/
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98.8vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    z-index: 0;
+}
+
+/*********************** 
+    GENERAL HEADING
+************************/
+.vertical-heading h5,
+.horizontal-heading h5{
+    color: #000;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    word-spacing: 9px;
+    font-family: 'Raleway',sans-serif;
+}
+
+.vertical-heading h5{
+    display: inline-block;
+    transform: rotate(-90deg);
+    position: relative;
+    top: 60px;
+    font-family: 'Raleway',sans-serif;
+    left: -55px;
+}
+
+.vertical-heading h2,
+.horizontal-heading h2{
+    font-size: 26px;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 100;
+    line-height: 45px;
+}
+
+.vertical-heading h2{
+    margin: 0 0 0 35px;
+    font-family: 'Raleway',sans-serif;
+}
+
+.highlight-heading{
+    color: #5c9320;
+	font-weight: 700;
+    font-family: 'Raleway',sans-serif;
+}
+
+.horizontal-heading{
+    text-align: center;
+    font-family: 'Raleway',sans-serif;
+}
+
+.horizontal-heading h2{
+    margin: 0;
+}
+
+.horizontal-heading h5{
+    margin-bottom: 5px;
+    font-size: 3rem;
+    font-family: 'Raleway',sans-serif;
+}
+
+
+/*************************************************************
+                    About                                     
+*************************************************************/
+
+#about .about-1 img{
+    width: 90%;
+}
+
+#about .content-about p{
+    font-family: 'Raleway',sans-serif;
+}
+
+.map iframe{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.footer{
+    background: #000;
+
+}
+
+.footer p{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    width: 100vw;
+    padding: 1.5rem!important;
+}
+#contact *{
+    padding: 0;
+    margin: 0;
+}
+
+
+.background{
+    background: url('../img/myimages/hero1.jpg')no-repeat center;
+}
+
+/*************************************************************
+                    FORM                                     
+*************************************************************/
+
+
+form input#uname,#password{
+    width: 60%;
+    margin: 1.5rem;
+    padding: 1rem;
+
+}
+
+.white-overlay{
+    /* position: absolute; */
+    /* top: 0%; */
+    /* left: 50%; */
+    background: rgba(255,255,255,0.8);
+/* /* width:100%; */
+height: 100vh;
+
+margin: 0;
+
+
+}

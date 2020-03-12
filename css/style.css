@@ -11,9 +11,17 @@
     display: block;
 }
 
-.rel{
+/* .rel{
     position: relative;
+} */
+/*********************** 
+    Tweaking bootstrap CLASSES
+************************/
+
+.row.no-gutters [class*=col-]{
+    padding: 0;
 }
+
 /*********************** 
     HELPER CLASSES
 ************************/
@@ -82,6 +90,27 @@
 .m-50{
     margin: 50px!important;
 }
+
+
+/*********************** 
+    HOME
+************************/
+.home-pic{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+.home-pic img{
+    width: 100%;
+    height: 100vh;
+}
+
+#home hr{
+    width: 10%;
+    height: 0.3rem;
+    margin: 0 auto;
+}
+
 .card{
     width: 100%;
     height: 100%;
@@ -177,7 +206,7 @@ hr{
 }
 
 .highlight-heading{
-    color: #5c9320;
+    color: #007BFF;
 	font-weight: 700;
     font-family: 'Raleway',sans-serif;
 }
@@ -225,8 +254,8 @@ hr{
     text-align: center;
     color: #fff;
     font-size: 1.4rem;
-    width: 100vw;
-    padding: 1.5rem!important;
+    width: 98vw;
+    padding: 1.5rem 0!important;
 }
 #contact *{
     padding: 0;
@@ -235,30 +264,65 @@ hr{
 
 
 .background{
-    background: url('../img/myimages/hero1.jpg')no-repeat center;
+    background: url('../img/myimages/bahekar.png')no-repeat center;
+    height: 100vh;
+    background-size: cover;
 }
 
 /*************************************************************
                     FORM                                     
 *************************************************************/
-
-
-form input#uname,#password{
-    width: 60%;
-    margin: 1.5rem;
-    padding: 1rem;
-
+.form-login{
+    display: table;
+    height: 100vh;
+}
+.form{
+    display: table-cell;
+    vertical-align: middle;
+}
+form{
+    margin: 0 auto;
 }
 
-.white-overlay{
-    /* position: absolute; */
-    /* top: 0%; */
-    /* left: 50%; */
-    background: rgba(255,255,255,0.8);
-/* /* width:100%; */
-height: 100vh;
+.login-form input{
+    border: none;
+    width: 80%;
+    padding: 0.5rem;
+    margin: 1rem;
+}
 
-margin: 0;
+.unameDiv,.passwordDiv{
+    width: 80%;
+    border: solid 1px #007BFF ;
+    ;
+    margin: 1rem;
+    margin: 3rem auto;
+}
 
+.blue{
+    color:#007BFF ;
+}
+.blue_bg{
+    background:#007BFF ;
+    color: #fff;
+}
+.passwordDiv span,.unameDiv span{
+    font-size: 2rem;
+    line-height: 50%;
+}
 
+#submit{
+    width: 100%;
+    /* margin: 1rem 6rem; */
+    display: flex;
+    /* -ms-flex-align: center; */
+    justify-content: center;
+    
+
+}
+#submit .submit-btn{
+    width: 20%;
+    padding: 1rem;
+    border-radius: 25px;
+    
 }

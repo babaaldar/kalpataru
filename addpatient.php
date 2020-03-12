@@ -6,7 +6,7 @@ include("include/connection.php");
 <head>
     <?php
     include "include/html_head.php";
-    include("include/checkuser.php");
+    // include("include/checkuser.php");
     ?>
 
 </head>

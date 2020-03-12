@@ -5,7 +5,7 @@
 
     include "include/connection.php";
     include "include/html_head.php";
-    include "include/checkuser.php";
+    // include "include/checkuser.php";
 
     ?>
 </head>

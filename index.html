@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
 
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css ">
 
 
     <!--Line Icons-->
@@ -61,71 +61,56 @@
 
 <body>
 
+<!-- 
+    <div id="wrapper" class="container-fluid ">
 
-    <div id="wrapper" class="container-fluid background">
-
-        <!-- <div class="overlay"> -->
+        <div class="overlay"> -->
 
             <!-- <div class="wrapper">
                
-            </div> -->
-            <section id="hero">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12 rel">
-                            <!-- <img src="./img/myimages/hero.jpg" alt=""> -->
-                            <div class="col-md-3">
+            </div>
+        
+            </section>
+        </div> -->
 
-                            </div>
-
-                            <div class="col-md-9 white-overlay">
-                                <form action="./verifyuser.php" method="post">
-                                    <!-- <div class="input-group mb-3">
-                    
-                                        <input type="text" class="form-control" placeholder="User name" id="uname" name="uname">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">
-                                                <span class="fa fa-user"></span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-
-
-
-                                    <div class="user">
-                                        <input type="text" placeholder="Enter User Name" id="uname" name="uname">
-                                        <span class="fa fa-user"></span>
-                                    </div>
-                                    <!-- <div class="input-group mb-3">
-                    
-                                        <input type="password" class="form-control" placeholder="Password" name="password" id="password">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">
-                                                <span class="fa fa-lock"></span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-
-                                    <div class="password">
-                                        <input type="password" placeholder="Enter Password" id="password">
-                                    </div>
-                                    
-                                </form>
-                            </div>
-
-                        </div>
-
-                    </div>
+    <section id="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 home-pic">
+                    <img src="./img/myimages/home.jpg" alt="">
                 </div>
-            </section>
+                <div class="col-md-6 form-login">
+                   <div class="form">
+                    <h1 class="text-center highlight-heading">LOGIN</h1>
+                    <hr>
 
-            <section id="about">
+                    <form action="./verifyuser.php" method="POST" class="login-form">
+                    
+                    <div class="unameDiv" id="uname">
+                        <input type="text" class="uname" placeholder="Please enter your login id">
+                        <span class="fa fa-user fa-2x blue"></span>
+                    </div>
+                    
+                    <div class="passwordDiv" id="password">
+                        <input type="password" class="password" placeholder="please enter your password">
+                        <span class="fa fa-lock fa-2x blue"></span>
+                    </div>
 
-            </section>
+                   <div class="row">
+                       <div class="col-md-12">
+                        <div id="submit">
+                            <input type="submit" value="Submit" class="submit-btn blue_bg text-center">
+                        </div>
+                       </div>
+                   </div>
+                    
+                    </form>
+                   </div>
+                </div>
+            </div>
         </div>
-
-
-    </div>
+    </section>
+    
     <section id="about" class="m-t-50">
         <div class="container">
             <div class="horizontal-heading">

@@ -56,7 +56,12 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
 
+    <?php
 
+    include "include/connection.php";
+    include "include/html_head.php";
+
+    ?>
 </head>
 
 <body>
@@ -118,11 +123,11 @@
             </div>
 
 
-            <div class="row">
-                <div class="col-md-6 img-responsive about-1">
-                    <img src="./img/logo-white.PNG" alt="">
+            <div class="row disTable">
+                <div class="col-md-3 img-responsive about-1 displayTableCell">
+                    <img src="./img/myimages/bahekar-logo-1.PNG" alt="">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-9">
                     <div class="content-about m-t-70">
                         <p class="m-50">In the year 1983, Dr Deepak and Dr Alka Bahekar came to Gondia.
                             They joined Government Hospital Gondia, as part of the post graduation
@@ -161,10 +166,117 @@
         </div>
     </section>
 
+    <!-- <section id="timeline">
+        <div class="timeline container">
+            <div class="horizontal-heading">
+                <h5 class=""><span class="highlight-heading">Time</span>Line</h5>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="row">
+                       
+                        <div class="col-md-12">
+                            <div class="horizontal-heading">
+                                <h5 class=""><span class="highlight-heading">1983</span></h5>
 
-    <section id="contact">
+                                <h4 class=".blue_bg data">Dr. Deepak and Dr. Alka Bahekar joined
+                                    Government hospital Gondia, as part of the post graduation training.</h4>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                <div class="card rev-card">
+                    <div class="row">
+                       
+                        <div class="col-md-12">
+                            <div class="horizontal-heading">
+                                <h5 class=""><span class="highlight-heading">1985</span></h5>
+
+                                <h4 class=".blue_bg data">Against all odds the foundation of Bahekar Nursing Home was laid.
+                                    1) A 10 bedded Hospital set up with
+                                    2) 2-bedded ICU,
+                                    3) Operation theatre and
+                                    4) 24 * 7 dedicated services for the locals. </h4>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="fewfirsts">
+        <div class="container p-30">
+         <div class="wrapper ">
+            <div class="horizontal-heading">
+                <h5 class="">A Few <span class="highlight-heading-white">Firsts</span></h5>
+            </div>
+            <div class="row firstsWrapper">
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-heartbeat icon red">
+
+                    </i>
+                    <h4>First fullyfledged 10
+                        bedded I.C.U. </h4>
+                </div>
+
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-stethoscope icon yellow">
+
+                    </i>
+                    <h4>First ventilator
+                        support services </h4>
+                </div>
+
+
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-plus-square icon green">
+
+                    </i>
+                    <h4>First blood
+                        distribution unit </h4>
+                </div>
+                
+            </div>
+            <div class="row firstsWrapper">
+                
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-female icon yellow">
+
+                    </i>
+                    <h4>First centre
+                        catering to high
+                        risk Obstetrics
+                        care  </h4>
+                </div>
+
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-thermometer-full icon green">
+
+                    </i>
+                    <h4>First dialysis
+                        center of the
+                        region </h4>
+                </div>
+
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-user-md icon red">
+
+                    </i>
+                    <h4>First joint
+                        replacement
+                        surgery</h4>
+                </div>
+            </div>
+         </div>
+        </div>
+    </section>
+    <section id="contact" class="m-t-70">
         <div class="horizontal-heading">
-            <h5 class=""><span class="highlight-heading">Reach</span> Us</h5>
+            <h5 class="m-30"><span class="highlight-heading">Reach</span> Us</h5>
         </div>
         <div class="row">
 

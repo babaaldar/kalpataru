@@ -11,11 +11,6 @@
     <!-- Title -->
     <title>Kalpataru</title>
 
-    <?php
-
-        include "include/html_head.php";
-    ?>
-
     <!-- Basic SEO -->
     <meta name="description" content="Bahekar Speciality Hospital, Gondia, Hospital">
     <meta name="keywords" content="Medicine,Hospital,Bahekar,Gondia">
@@ -33,7 +28,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
 
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css ">
+
 
     <!--Line Icons-->
     <link rel="stylesheet" href="css/line-icons/line-icons.css">
@@ -60,144 +56,77 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
 
+    <?php
 
+    // include "include/connection.php";
+    // include "include/html_head.php";
+
+    ?>
 </head>
 
 <body>
 
+<!-- 
+    <div id="wrapper" class="container-fluid ">
 
-    <div id="wrapper" class="container-fluid">
+        <div class="overlay"> -->
 
-        <div class="overlay">
-
-            <div class="wrapper">
-                <header>
-                    <nav class="navbar nav-fixed-top">
-                        <div class="container-fluid">
-                            <div class="site-nav-wrapper">
-                                <div class="navbar-header">
-                                    <span class="hidden-md hidden-lg" id="mobile-nav-open-btn">&#9776;</span>
-                                    <a href="#home" class="navbar-brand smooth-scroll">
-                                        <span class="logo">
-                                            <img src="./img/logo.PNG" alt="Bahekar Super Speciality center logo">
-                                        </span>
-                                    </a>
-                                </div>
-
-                                <div class="container">
-                                    <div class="collapse navbar-collapse">
-                                        <ul class="nav navbar-nav pull-right">
-                                            <li class="active"><a href="#home" class="smooth-scroll">Home</a></li>
-                                            <li class=""><a href="#about" class="smooth-scroll">About</a></li>
-                                            <!--
-                                   <li class=""><a href="#team" class="smooth-scroll">Team</a></li>
-                                   <li class=""><a href="#services" class="smooth-scroll">Services</a></li>
-                                   <li class=""><a href="#work" class="smooth-scroll">Work</a></li>
-                                   <li class=""><a href="#blog" class="smooth-scroll">Blog</a></li>
--->
-                                            <li class=""><a href="#contacts" class="smooth-scroll">Contact</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <!--                       mobile-menu-->
-
-
-                                <!--
-                      <div id="mobile-nav">
-                          <span id="mobile-nav-close-btn">   &times;</span>
-                          
-                          <div id="mobile-nav-content">
-                              <ul class="nav">
-                                    <li class="active"><a href="#home" >Home</a></li>
-                                   <li><a href="#about" class="">About</a></li>
-                                   <li><a href="#team" class="">Team</a></li>
-                                   <li><a href="#services" class="">Services</a></li>
-                                   <li><a href="#portfolio" class="">Work</a></li>
-                                   <li><a href="#blog" class="">Blog</a></li>
-                                   <li><a href="#contacts" class="">Contact</a></li>
-                              </ul>
-                          </div>
-                      </div>
--->
-                            </div>
-                        </div>
-                    </nav>
-                </header>
-
+            <!-- <div class="wrapper">
+               
             </div>
-            <section id="hero" class="m-t-30">
-                <div class="container-fluid">
-                    <div class="row">
-                    
-                        <div class="col-md-12 login-section">
-                           
-                                <!-- /.login-logo -->
-                                <div class="card">
-                                    <div class="card-body login-card-body">
-                                        <p class="login-box-msg">Sign in </p>
+        
+            </section>
+        </div> -->
 
-                                        <form action="./verifyuser.php" method="post">
-                                            <div class="input-group mb-3">
-
-                                                <input type="text" class="form-control" placeholder="User name" id="uname" name="uname">
-                                                <div class="input-group-append">
-                                                    <div class="input-group-text">
-                                                        <span class="fas fa-user"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-3">
-
-                                                <input type="password" class="form-control" placeholder="Password" name="password" id="password">
-                                                <div class="input-group-append">
-                                                    <div class="input-group-text">
-                                                        <span class="fas fa-lock"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-
-                                                <!-- /.col -->
-                                                <div class="col-12">
-                                                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                        </form>
-                                        <!---->
-                                        <!--            <div class="social-auth-links text-center mb-3">-->
-                                        <!--                <p>- OR -</p>-->
-                                        <!--                <a href="#" class="btn btn-block btn-primary">-->
-                                        <!--                    <i class="fab fa-facebook mr-2"></i> Sign in using Facebook-->
-                                        <!--                </a>-->
-                                        <!--                <a href="#" class="btn btn-block btn-danger">-->
-                                        <!--                    <i class="fab fa-google-plus mr-2"></i> Sign in using Google+-->
-                                        <!--                </a>-->
-                                        <!--            </div>-->
-
-                                        <!--            <p class="mb-1">-->
-                                        <!--                <a href="forgot-password.html">I forgot my password</a>-->
-                                        <!--            </p>-->
-                                        <!--            <p class="mb-0">-->
-                                        <!--                <a href="register.html" class="text-center">Register a new membership</a>-->
-                                        <!--            </p>-->
-                                    </div>
-                                    <!-- /.login-card-body -->
-                                
-                            </div>
-                        </div>
-                    </div>
+    <section id="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 home-pic">
+                    <img src="./img/myimages/home.jpg" alt="">
                 </div>
-            </section>
+                <div class="col-md-6 form-login">
+                    <!-- <div class="row nav">
+                        <nav class="nav">
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#contact">Reach Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                     -->
+                     
+                   <div class="form">
+                    <h1 class="text-center highlight-heading">LOGIN</h1>
+                    <hr>
 
-            <section id="about">
+                    <form action="./verifyuser.php" method="POST" class="login-form">
+                    
+                    <div class="unameDiv" id="uname">
+                        <input type="text" class="uname" placeholder="Please enter your login id">
+                        <span class="fa fa-user fa-2x blue"></span>
+                    </div>
+                    
+                    <div class="passwordDiv" id="password">
+                        <input type="password" class="password" placeholder="please enter your password">
+                        <span class="fa fa-lock fa-2x blue"></span>
+                    </div>
 
-            </section>
+                   <div class="row">
+                       <div class="col-md-12">
+                        <div id="submit">
+                            <input type="submit" value="Submit" class="submit-btn blue_bg text-center">
+                        </div>
+                       </div>
+                   </div>
+                    
+                    </form>
+                   </div>
+                </div>
+            </div>
         </div>
-
-
-    </div>
+    </section>
+    
     <section id="about" class="m-t-50">
         <div class="container">
             <div class="horizontal-heading">
@@ -205,11 +134,11 @@
             </div>
 
 
-            <div class="row">
-                <div class="col-md-6 img-responsive about-1">
-                    <img src="./img/logo-white.PNG" alt="">
+            <div class="row disTable">
+                <div class="col-md-3 img-responsive about-1 displayTableCell">
+                    <img src="./img/myimages/bahekar-logo-1.PNG" alt="">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-9">
                     <div class="content-about m-t-70">
                         <p class="m-50">In the year 1983, Dr Deepak and Dr Alka Bahekar came to Gondia.
                             They joined Government Hospital Gondia, as part of the post graduation
@@ -248,10 +177,117 @@
         </div>
     </section>
 
+    <!-- <section id="timeline">
+        <div class="timeline container">
+            <div class="horizontal-heading">
+                <h5 class=""><span class="highlight-heading">Time</span>Line</h5>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="row">
+                       
+                        <div class="col-md-12">
+                            <div class="horizontal-heading">
+                                <h5 class=""><span class="highlight-heading">1983</span></h5>
 
-    <section id="contact">
+                                <h4 class=".blue_bg data">Dr. Deepak and Dr. Alka Bahekar joined
+                                    Government hospital Gondia, as part of the post graduation training.</h4>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                <div class="card rev-card">
+                    <div class="row">
+                       
+                        <div class="col-md-12">
+                            <div class="horizontal-heading">
+                                <h5 class=""><span class="highlight-heading">1985</span></h5>
+
+                                <h4 class=".blue_bg data">Against all odds the foundation of Bahekar Nursing Home was laid.
+                                    1) A 10 bedded Hospital set up with
+                                    2) 2-bedded ICU,
+                                    3) Operation theatre and
+                                    4) 24 * 7 dedicated services for the locals. </h4>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="fewfirsts">
+        <div class="container p-30">
+         <div class="wrapper ">
+            <div class="horizontal-heading">
+                <h5 class="">A Few <span class="highlight-heading-white">Firsts</span></h5>
+            </div>
+            <div class="row firstsWrapper">
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-heartbeat icon red">
+
+                    </i>
+                    <h4>First fullyfledged 10
+                        bedded I.C.U. </h4>
+                </div>
+
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-stethoscope icon yellow">
+
+                    </i>
+                    <h4>First ventilator
+                        support services </h4>
+                </div>
+
+
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-plus-square icon green">
+
+                    </i>
+                    <h4>First blood
+                        distribution unit </h4>
+                </div>
+                
+            </div>
+            <div class="row firstsWrapper">
+                
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-female icon yellow">
+
+                    </i>
+                    <h4>First centre
+                        catering to high
+                        risk Obstetrics
+                        care  </h4>
+                </div>
+
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-thermometer-full icon green">
+
+                    </i>
+                    <h4>First dialysis
+                        center of the
+                        region </h4>
+                </div>
+
+                <div class="col-md-3 firsts">
+                    <i class="fa fa-user-md icon red">
+
+                    </i>
+                    <h4>First joint
+                        replacement
+                        surgery</h4>
+                </div>
+            </div>
+         </div>
+        </div>
+    </section>
+    <section id="contact" class="m-t-70">
         <div class="horizontal-heading">
-            <h5 class=""><span class="highlight-heading">Reach</span> Us</h5>
+            <h5 class="m-30"><span class="highlight-heading">Reach</span> Us</h5>
         </div>
         <div class="row">
 

@@ -230,7 +230,7 @@
                     <i class="fa fa-heartbeat icon red">
 
                     </i>
-                    <h4>First fullyfledged 10
+                    <h4>Fullyfledged 10
                         bedded I.C.U. </h4>
                 </div>
 
@@ -238,7 +238,7 @@
                     <i class="fa fa-stethoscope icon yellow">
 
                     </i>
-                    <h4>First ventilator
+                    <h4>Ventilator
                         support services </h4>
                 </div>
 
@@ -247,7 +247,7 @@
                     <i class="fa fa-plus-square icon green">
 
                     </i>
-                    <h4>First blood
+                    <h4>Blood
                         distribution unit </h4>
                 </div>
                 
@@ -258,7 +258,7 @@
                     <i class="fa fa-female icon yellow">
 
                     </i>
-                    <h4>First centre
+                    <h4>Centre
                         catering to high
                         risk Obstetrics
                         care  </h4>
@@ -268,7 +268,7 @@
                     <i class="fa fa-thermometer-full icon green">
 
                     </i>
-                    <h4>First dialysis
+                    <h4>Dialysis
                         center of the
                         region </h4>
                 </div>
@@ -277,7 +277,7 @@
                     <i class="fa fa-user-md icon red">
 
                     </i>
-                    <h4>First joint
+                    <h4>Joint
                         replacement
                         surgery</h4>
                 </div>

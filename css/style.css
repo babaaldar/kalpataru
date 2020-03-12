@@ -326,6 +326,11 @@ hr{
 form{
     margin: 0 auto;
 }
+input:focus, textarea:focus, select:focus {
+    border:solid 1px #fff;
+    outline: none;
+    box-shadow: none;
+}
 
 .login-form input{
     border: none;

@@ -51,6 +51,10 @@ body section#home{
 .p-30{
     padding:30px!important;
 }
+
+.m-0{
+    margin:0px!important;
+}
 .m-30{
     margin:30px!important;
 }
@@ -135,7 +139,7 @@ body section#home{
     margin: 0;
     height: 100vh;
 }
-.home-pic img{
+.home-pic .bg{
     width: 100%;
     height: 100vh;
 }
@@ -263,8 +267,52 @@ hr{
     font-size: 3rem;
     font-family: 'Raleway',sans-serif;
 }
+/*************************************************************
+                    NAVBAR                                     
+*************************************************************/
+.nav{
+    /* width: 100vw; */
+    position: absolute;
+    right: 0;
+}
 
 
+.nav-wrapper img{
+    padding: 10px 0;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.nav ul li{
+    list-style: none;
+    margin: 1rem;
+}
+.nav ul li a{
+    color: #007BFF;
+}
+.nav-wrapper{
+    background: transparent;
+    height: 10%;
+}
+.nav-wrapper img{
+    width: 19%;
+    margin: 0;
+    /* height: 100%; */
+}
+.scrolled-navbar{
+    /* padding: 10px 0; */
+    /* box-shadow: 0 8px 6px -9px #999; */
+    z-index:3;
+}
+
+.scrolled-navbar a{
+    color: #fff;
+}
+.blue-nav-top{
+    background: #007BFF;
+    opacity: 1;
+}
 /*************************************************************
                     About                                     
 *************************************************************/
@@ -339,6 +387,13 @@ input:focus, textarea:focus, select:focus {
     margin: 1rem;
 }
 
+.form-login nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+.form-login nav ul li{
+    list-style: none;
+}
 .unameDiv,.passwordDiv{
     width: 80%;
     border: solid 1px #007BFF ;
@@ -347,8 +402,12 @@ input:focus, textarea:focus, select:focus {
     margin: 3rem auto;
 }
 
+
 .blue{
     color:#007BFF ;
+}
+.white{
+    color: #fff!important;
 }
 .blue_bg{
     background:#007BFF ;
@@ -441,3 +500,14 @@ border: solid 1px #007BFF;
     font-family: 'Raleway',sans-serif;
     color: #fff;
 }
+
+/* .home-pic{
+    position: relative;
+}
+
+#home .home-pic .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+} */

@@ -64,7 +64,7 @@
     ?>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="40">
 
 <!-- 
     <div id="wrapper" class="container-fluid ">
@@ -78,23 +78,41 @@
             </section>
         </div> -->
 
+    
+       <div class="nav-wrapper navbar-fixed-top scrolled-navbar collapse navbar-collapse">
+           <div class="container-fluid">
+               <div class="row m-0">
+                   <div class="col-md-6" style="margin: 0;padding:0;">
+                   <img src="./img/myimages/bahekar-logo.png" alt="" class="logo">
+                   </div>
+                   <div class="col-md-6" >
+                   <nav class="nav">
+                            <ul id="navbar">
+                                <li><a href="#home" class="white">Home</a></li>
+                                <li><a href="#about" class="white">About Us</a></li>
+                                <li><a href="#contact" class="white">Reach Us</a></li>
+                            </ul>
+                        </nav>
+                   </div>
+               </div>
+           </div>
+       
+                        
+                        </div>
+                   
+
     <section id="home">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 home-pic">
-                    <img src="./img/myimages/home.jpg" alt="">
+                    <img src="./img/myimages/home.jpg" alt="" class="bg">
+                    <!-- <img src="./img/myimages/bahekar-logo.png" alt="" class="logo"> -->
                 </div>
                 <div class="col-md-6 form-login">
-                    <!-- <div class="row nav">
-                        <nav class="nav">
-                            <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#about">About Us</a></li>
-                                <li><a href="#contact">Reach Us</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                     -->
+                    <!-- <div class="container-fluid" style="margin: 0 auto;">
+                    
+                    </div> -->
+                    
                      
                    <div class="form">
                     <h1 class="text-center highlight-heading">LOGIN</h1>

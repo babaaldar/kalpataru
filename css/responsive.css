@@ -2,3 +2,114 @@
  * style.css
  * Contains CSS to make site responsive i.e. mobile and tab friendly.
  */
+
+html{
+    overflow-x: hidden;
+ }
+
+ #home{
+     width: 100vw;
+ }
+ #home .bg{
+    /* background: #fc3; */
+    width: 100vw;
+ }
+
+ .form-login{
+     width: 100vw;
+ }
+ 
+ #about img{
+     margin: 0;
+ }
+ #about{
+     margin: 0;
+ }
+ .form{
+     padding: 0!important;
+     margin: 0!important;
+ }
+.about-1{
+    width: 100vw;
+}
+ .about-1 img{
+     width: 60%;
+     display: flex;
+     justify-content: space-around;
+ }
+.logo-1{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.nav{
+    display: none;
+}
+
+.mobile-nav{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 97vw;
+    
+    /* background:#fff; */
+    z-index: 111;
+    
+}
+.mob-nav{
+    margin: 1rem;
+}
+.mobile-nav ul {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mobile-nav ul li{
+    justify-content: space-around;
+    /* width: 100%; */
+    /* margin: 1rem auto; */
+    list-style: none;
+    padding: 1rem;
+}
+
+.mobile-nav ul li a{
+    padding: 1rem;
+}
+.mobile-nav ul li a:hover{
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+}
+/* .nav{
+    position: ;
+} */
+/* 
+.mobile-nav{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+} */
+
+.rel{
+    position: relative;
+}
+.nav{
+    /* width: 100vw; */
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+
+
+

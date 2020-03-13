@@ -54,7 +54,8 @@
     <link rel="stylesheet" href="./css/animate/animate.css">
 
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width:768px)">
+
 
     <?php
 
@@ -66,28 +67,25 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40">
 
-<!-- 
-    <div id="wrapper" class="container-fluid ">
-
-        <div class="overlay"> -->
-
-            <!-- <div class="wrapper">
-               
-            </div>
-        
-            </section>
-        </div> -->
-
+<div class="mobile-nav navbar-fixed-top">
+               <nav class="mob-nav">
+                            <ul id="mob-navbar" class="rev-nav">
+                                <li><a href="#login-f" class="white">Home</a></li>
+                                <li><a href="#about" class="white">About Us</a></li>
+                                <li><a href="#contact" class="white">Reach Us</a></li>
+                            </ul>
+                        </nav>
+</div>
     
        <div class="nav-wrapper navbar-fixed-top scrolled-navbar collapse navbar-collapse">
-           <div class="container-fluid">
+           <div class="container-fluid rel">
                <div class="row m-0">
                    <div class="col-md-6" style="margin: 0;padding:0;">
                    <img src="./img/myimages/bahekar-logo.png" alt="" class="logo">
                    </div>
                    <div class="col-md-6" >
                    <nav class="nav">
-                            <ul id="navbar">
+                            <ul id="navbar" class="rev-nav">
                                 <li><a href="#home" class="white">Home</a></li>
                                 <li><a href="#about" class="white">About Us</a></li>
                                 <li><a href="#contact" class="white">Reach Us</a></li>
@@ -95,6 +93,8 @@
                         </nav>
                    </div>
                </div>
+
+               
            </div>
        
                         
@@ -103,10 +103,12 @@
 
     <section id="home">
         <div class="container-fluid">
+            
             <div class="row">
                 <div class="col-md-6 home-pic">
                     <img src="./img/myimages/home.jpg" alt="" class="bg">
                     <!-- <img src="./img/myimages/bahekar-logo.png" alt="" class="logo"> -->
+                    <img src="./img/myimages/bahekar-logo.png" alt="" class="logo-1">
                 </div>
                 <div class="col-md-6 form-login">
                     <!-- <div class="container-fluid" style="margin: 0 auto;">
@@ -114,7 +116,7 @@
                     </div> -->
                     
                      
-                   <div class="form">
+                   <div class="form" id="login-f">
                     <h1 class="text-center highlight-heading">LOGIN</h1>
                     <hr>
 
@@ -152,9 +154,13 @@
             </div>
 
 
-            <div class="row disTable">
-                <div class="col-md-3 img-responsive about-1 displayTableCell">
+            <div class="row">
+
+            <div class="disTable">
+                <div class="col-md-3">
+                    <div class="img-responsive about-1 displayTableCell">
                     <img src="./img/myimages/bahekar-logo-1.PNG" alt="">
+                    </div>
                 </div>
                 <div class="col-md-9">
                     <div class="content-about m-t-70">
@@ -168,7 +174,7 @@
                             cornerstones on which the foundation was set. It was started as a 10
                             bedded Hospital set up with 2-bedded ICU, an operation theatre and 24 *
                             7 dedicated services to the locals. The dedication, devotion and the
-                            sincerity in the efforts turned this nursing home into a healthcare hotspot. <br><br> <a href="./docs/BAHEKAR%20SUPER%20option%202.pdf.pdf" class="read-more">Read More</a>
+                            sincerity in the efforts turned this nursing home into a healthcare hotspot. <br><br> <a href="./more-info.html" class="read-more">Read More</a>
                         </p>
 
                         <p class="d-none more-content">
@@ -192,6 +198,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -243,7 +250,9 @@
             <div class="horizontal-heading">
                 <h5 class="">A Few <span class="highlight-heading-white">Firsts</span></h5>
             </div>
-            <div class="row firstsWrapper">
+            <div class="fw">
+            <div class="fw-inner">
+            <div class="row">
                 <div class="col-md-3 firsts">
                     <i class="fa fa-heartbeat icon red">
 
@@ -270,7 +279,9 @@
                 </div>
                 
             </div>
-            <div class="row firstsWrapper">
+            <!-- </div>
+            <div class="firstsWrapper"> -->
+            <div class="row ">
                 
                 <div class="col-md-3 firsts">
                     <i class="fa fa-female icon yellow">
@@ -300,6 +311,8 @@
                         surgery</h4>
                 </div>
             </div>
+            </div>
+         </div>
          </div>
         </div>
     </section>

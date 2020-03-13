@@ -20,11 +20,13 @@ function showHideNav(){
     if($(window).scrollTop()>50){
         $('.nav-wrapper').addClass('scrolled-navbar blue-nav-top');
         $('#navbar a').addClass('white');
+        $('#navbar').addClass('rev-nav');
         $('.navbar-brand img').attr('src',"img/logo/logo-dark.png");
         $("#back-to-top").fadeIn();
     }else{  
         
         $('#navbar a').removeClass('white');
+        $('#navbar').removeClass('rev-nav');
         $('.navbar-brand img').attr('src',"img/logo/logo.png");
         $('.nav-wrapper').removeClass('scrolled-navbar blue-nav-top');
         $("#back-to-top").fadeOut();

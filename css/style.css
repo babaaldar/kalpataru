@@ -1,0 +1,531 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto',sans-serif;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+.yellow{
+    color: yellow;
+}
+section{
+    margin: 2rem 0!important;
+}
+.d-none{
+    display: none;
+}
+.read-more:active .more-content{
+    display: block;
+}
+body section#home{
+    margin: 0!important;
+}   
+
+/* nav ul{
+    display: flex;
+    justify-content: space-between;
+} */
+/* .rel{
+    position: relative;
+} */
+/*********************** 
+    Tweaking bootstrap CLASSES
+************************/
+
+.row.no-gutters [class*=col-]{
+    padding: 0;
+}
+
+/*********************** 
+    HELPER CLASSES
+************************/
+.p-0{
+    padding: 0!important;
+}
+.p-30{
+    padding:30px!important;
+}
+
+.m-0{
+    margin:0px!important;
+}
+.m-30{
+    margin:30px!important;
+}
+.m-70{
+    margin:70px!important;
+}
+.p-100{
+    padding: 100px!important;
+}
+
+.p-t-0{
+    padding-top: 0!important;
+}
+.p-t-100{
+    padding-top: 100px!important;
+}
+
+.p-t-30{
+    padding-top: 30px!important;
+}
+.p-b-0{
+    padding-bottom: 0!important;
+}
+.p-b-100{
+    padding-bottom: 100px!important;
+}
+
+.m-b-0{
+    margin-bottom: 0px!important;
+}
+.m-b-30{
+    margin-bottom: 30px!important;
+}
+.m-b-50{
+    margin-bottom: 50px!important;
+}
+.m-b-20{
+    margin-bottom: 20px!important;
+}
+.m-b-10{
+    margin-bottom: 10px!important;
+}
+.m-b-50{
+    margin-bottom: 50px!important;
+}
+.m-b-100{
+    margin-bottom: 100px!important;
+}
+.m-b-150{
+    margin-bottom: 150px!important;
+}
+
+.m-t-0{
+    margin-top: 0px!important;
+}
+.m-t-70{
+    margin-top: 70px!important;
+}
+.m-t-30{
+    margin-top: 30px!important;
+}
+.m-t-50{
+    margin-top: 50px!important;
+}
+.m-50{
+    margin: 50px!important;
+}
+
+.disTable{
+    display: table;
+}
+
+.displayTableCell{
+    display: table-cell;
+}
+
+/*********************** 
+    HOME
+************************/
+.home-pic{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+.home-pic .bg{
+    width: 100%;
+    height: 100vh;
+}
+
+#home hr{
+    width: 10%;
+    height: 0.3rem;
+    margin: 0 auto;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    margin: 0.5rem;
+    padding: 0.5rem;
+
+}
+.card img{
+        width: 100%;
+}
+        
+.cards{
+            
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+
+}
+hr{
+    height: 1px;
+    border: none;
+    background: #000;
+}
+
+
+
+
+.logo{
+    width: 70px;
+    height: 70px;
+}
+.logo img{
+    padding: 0;
+    width: 100%;
+}
+
+/*************************************************************
+                    HERO                                     
+*************************************************************/
+
+#wrapper{
+     /* background: url('../kalpataru/include/dist/img/bgimg.jpeg')no-repeat center; */
+    height: 100vh;
+/*    width: 100vw;*/
+    background-size: cover;
+/*    position: relative;*/
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98.8vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    z-index: 0;
+}
+
+/*********************** 
+    GENERAL HEADING
+************************/
+.vertical-heading h5,
+.horizontal-heading h5{
+    color: #000;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    word-spacing: 9px;
+    font-family: 'Raleway',sans-serif;
+}
+
+.vertical-heading h5{
+    display: inline-block;
+    transform: rotate(-90deg);
+    position: relative;
+    top: 60px;
+    font-family: 'Raleway',sans-serif;
+    left: -55px;
+}
+
+.vertical-heading h2,
+.horizontal-heading h2{
+    font-size: 26px;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 100;
+    line-height: 45px;
+}
+
+.vertical-heading h2{
+    margin: 0 0 0 35px;
+    font-family: 'Raleway',sans-serif;
+}
+
+.highlight-heading{
+    color: #007BFF;
+	font-weight: 700;
+    font-family: 'Raleway',sans-serif;
+}
+.highlight-heading-white{
+    color: #fff;
+}
+
+.horizontal-heading{
+    text-align: center;
+    font-family: 'Raleway',sans-serif;
+}
+
+.horizontal-heading h2{
+    margin: 0;
+}
+
+.horizontal-heading h5{
+    margin-bottom: 5px;
+    font-size: 3rem;
+    font-family: 'Raleway',sans-serif;
+}
+/*************************************************************
+                    NAVBAR                                     
+*************************************************************/
+.nav{
+    /* width: 100vw; */
+    position: absolute;
+    right: 0;
+}
+
+
+.nav-wrapper img{
+    padding: 10px 0;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.nav ul li{
+    list-style: none;
+    margin: 1rem;
+}
+.nav ul li a{
+    color: #007BFF;
+    text-decoration: none;
+    padding: 0.7rem;
+}
+.nav #navbar li a:hover{
+    background: #007BFF;
+    color: #fff;
+    border-radius: 25px;
+}
+.nav-wrapper{
+    background: transparent;
+    height: 10%;
+}
+.nav-wrapper img{
+    width: 19%;
+    margin: 0;
+    /* height: 100%; */
+}
+.scrolled-navbar{
+    /* padding: 10px 0; */
+    /* box-shadow: 0 8px 6px -9px #999; */
+    z-index:3;
+}
+
+.scrolled-navbar a{
+    color: #fff;
+}
+
+a:hover{
+    background: #fff;
+    color: #007BFF;
+    border-radius: 25px;
+}
+.blue-nav-top{
+    background: #007BFF;
+    opacity: 1;
+}
+/*************************************************************
+                    About                                     
+*************************************************************/
+
+#about .about-1 img{
+    width:100%;
+}
+
+.about-1{
+    /* height: 100vh; */
+    vertical-align: middle;
+}
+
+#about .content-about p{
+    font-family: 'Raleway',sans-serif;
+}
+
+.map iframe{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.footer{
+    background: #000;
+
+}
+
+.footer p{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    width: 98vw;
+    padding: 1.5rem 0!important;
+}
+#contact *{
+    padding: 0;
+    margin: 0;
+}
+
+
+.background{
+    background: url('../img/myimages/bahekar.png')no-repeat center;
+    height: 100vh;
+    background-size: cover;
+}
+
+/*************************************************************
+                    FORM                                     
+*************************************************************/
+.form-login{
+    display: table;
+    height: 100vh;
+}
+.form{
+    display: table-cell;
+    vertical-align: middle;
+}
+form{
+    margin: 0 auto;
+}
+input:focus, textarea:focus, select:focus {
+    border:solid 1px #fff;
+    outline: none;
+    box-shadow: none;
+}
+
+.login-form input{
+    border: none;
+    width: 80%;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.form-login nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+.form-login nav ul li{
+    list-style: none;
+}
+.unameDiv,.passwordDiv{
+    width: 80%;
+    border: solid 1px #007BFF ;
+    ;
+    margin: 1rem;
+    margin: 3rem auto;
+}
+
+
+.blue{
+    color:#007BFF ;
+}
+.white{
+    color: #fff!important;
+}
+.blue_bg{
+    background:#007BFF ;
+    color: #fff;
+}
+.passwordDiv span,.unameDiv span{
+    font-size: 2rem;
+    line-height: 50%;
+}
+
+#submit{
+    width: 100%;
+    /* margin: 1rem 6rem; */
+    display: flex;
+    /* -ms-flex-align: center; */
+    justify-content: center;
+    
+
+}
+#submit .submit-btn{
+    width: 20%;
+    padding: 1rem;
+    border-radius: 25px;
+    
+}
+
+/*************************************************************
+                    Timeline                                     
+*************************************************************/
+
+.cards .card .col-md-12{
+background: #fff;
+border: solid 1px #007BFF;
+}
+.cards .card .col-md-3{
+    background: #fff;
+}
+.cards .card .col-md-9{
+    background: #007BFF;
+}
+.cards .card h1{
+    background: #fff;
+}
+
+.year{
+    height: 100%;
+}
+
+.data{
+    width: 100%;
+    background:#007BFF ;
+    color: #fff;
+    padding: 3rem;
+}
+.firsts{
+    margin: 3rem;
+ 
+}
+
+#fewfirsts{
+    background: #007BFF;
+}
+
+#fewfirsts .wrapper{
+    margin: 0 auto;
+    
+}
+
+.logo-1{
+    display: none;
+}
+.mobile-nav{
+    display: none;
+}
+.fw{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.firsts .icon{
+    /* background: #fff; */
+    /* width: 100%; */
+    /* border-radius: 25px; */
+    font-size: 6rem;
+    display: block;
+    text-align: center;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+}
+.firsts h4{
+    text-align: center;
+    font-family: 'Raleway',sans-serif;
+    color: #fff;
+}
+
+/* .home-pic{
+    position: relative;
+}
+
+#home .home-pic .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+} */

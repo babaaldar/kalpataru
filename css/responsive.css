@@ -37,6 +37,10 @@ html{
      display: flex;
      justify-content: space-around;
  }
+
+ .black{
+     color: #000;
+ }
 .logo-1{
     display: block;
     position: absolute;
@@ -56,13 +60,21 @@ html{
     top: 10px;
     right: 0;
     width: 97vw;
-    
+    background: #007BFF;   
     /* background:#fff; */
     z-index: 111;
     
 }
+.mobile-nav .mob-nav ul li{
+    margin: 0.5rem;
+}
+.mobile-nav .mob-nav ul li a:hover{
+    background: #fff;
+    color: #007BFF!important;
+}
 .mob-nav{
-    margin: 1rem;
+    /* margin: 1rem; */
+    background: #007BFF; 
 }
 .mobile-nav ul {
     display: flex;

@@ -67,8 +67,8 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40">
 
-<div class="mobile-nav navbar-fixed-top">
-               <nav class="mob-nav">
+<div class="mobile-nav">
+               <nav class="mob-nav  navbar-fixed-top">
                             <ul id="mob-navbar" class="rev-nav">
                                 <li><a href="#login-f" class="white">Home</a></li>
                                 <li><a href="#about" class="white">About Us</a></li>
@@ -106,7 +106,7 @@
             
             <div class="row">
                 <div class="col-md-6 home-pic">
-                    <img src="./img/myimages/home.jpg" alt="" class="bg">
+                    <img src="./img/myimages/bahekar.png" alt="" class="bg">
                     <!-- <img src="./img/myimages/bahekar-logo.png" alt="" class="logo"> -->
                     <img src="./img/myimages/bahekar-logo.png" alt="" class="logo-1">
                 </div>
@@ -157,12 +157,12 @@
             <div class="row">
 
             <div class="disTable">
-                <div class="col-md-3">
+                <div class="col-md-5">
                     <div class="img-responsive about-1 displayTableCell">
-                    <img src="./img/myimages/bahekar-logo-1.PNG" alt="">
+                    <img src="./img/myimages/bahekar-logo-2.PNG" alt="">
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-7">
                     <div class="content-about m-t-70">
                         <p class="m-50">In the year 1983, Dr Deepak and Dr Alka Bahekar came to Gondia.
                             They joined Government Hospital Gondia, as part of the post graduation

@@ -37,6 +37,10 @@ html{
      display: flex;
      justify-content: space-around;
  }
+
+ .black{
+     color: #000;
+ }
 .logo-1{
     display: block;
     position: absolute;

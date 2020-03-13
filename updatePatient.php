@@ -8,7 +8,7 @@ include("include/connection.php");
     include "include/html_head.php";
     include("include/checkuser.php");
     ?>
-
+    <link rel="stylesheet" href="./include/plugins/fontawesome-free/css/fontawesome.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <!-- Site wrapper -->

@@ -33,7 +33,7 @@
 
                 <li class="nav-item">
                     <a href="./addpatient.php" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fa fa-bars"></i>
                         <p>
                             Dashboard
                         </p>

@@ -81,7 +81,7 @@ if (isset($_SESSION['login'])) {
            <div class="container-fluid rel">
                <div class="row m-0">
                    <div class="col-md-6" style="margin: 0;padding:0;">
-                   <img src="./img/myimages/bahekar-logo.png" alt="" class="logo">
+                   <img src="./img/myimages/logo.png" alt="Logo" class="logo">
                    </div>
                    <div class="col-md-6" >
                    <nav class="nav">
@@ -334,7 +334,7 @@ if (isset($_SESSION['login'])) {
 
         </div>
         <div class="footer">
-            <p class="text-center">Copyright @2020 <span class="highlight-heading">KJSCE</span></p>
+            <p class="text-center">Copyright @2020 <span class="highlight-heading">BSH</span></p>
         </div>
     </section>
 

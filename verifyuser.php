@@ -1,7 +1,7 @@
 <?php
 include("include/connection.php");
 
-$sql = "SELECT * FROM doctors WHERE user_id='" . $_POST['uname'] . "'    and password='" . $_POST["password"] . "'";
+$sql = "SELECT * FROM doctors WHERE user_id='" . $_POST['uname'] . "' and password='" . $_POST["password"] . "'";
 $res = mysqli_query($con, $sql);
 
 if (mysqli_num_rows($res) == 1) {

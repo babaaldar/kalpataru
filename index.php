@@ -164,7 +164,7 @@
                 </div>
                 <div class="col-md-7">
                     <div class="content-about m-t-70">
-                        <p class="m-50">In the year 1983, Dr Deepak and Dr Alka Bahekar came to Gondia.
+                        <p class="m-50" style="text-align: justify;">In the year 1983, Dr Deepak and Dr Alka Bahekar came to Gondia.
                             They joined Government Hospital Gondia, as part of the post graduation
                             training. <br> <br>Over the mandatory one-year registrar-ship they developed a
                             bond with the people. It grew so strong that they settled in this foreign
@@ -174,10 +174,14 @@
                             cornerstones on which the foundation was set. It was started as a 10
                             bedded Hospital set up with 2-bedded ICU, an operation theatre and 24 *
                             7 dedicated services to the locals. The dedication, devotion and the
-                            sincerity in the efforts turned this nursing home into a healthcare hotspot. <br><br> <a href="./more-info.html" class="read-more">Read More</a>
+                            sincerity in the efforts turned this nursing home into a healthcare hotspot. In 1996 to meet rising demands, the hospital was upgraded to a 25- bedded setup; bringing quality healthcare to the grass roots. Shifting critical patients to the closest tertiary centres in Nagpur, 
+                            on ventilator support was a challenge. Precious lives were lost in the transit.
+                            After 25 years of practice- when doctors plan to ‘slow down’ Dr. Mr. and
+                            Mrs. Bahekar decided to take the challenge of elevating healthcare in
+                            Gondia to another level.<br><br> <a href="./more-info.html" class="read-more">Read More</a>
                         </p>
 
-                        <p class="d-none more-content">
+                        <p class="d-none more-content" style="text-align: justify;">
                             In 1996 to meet rising demands, the hospital was upgraded to a 25-
                             bedded setup; bringing quality healthcare to the grass roots.
                             Shifting critical patients to the closest tertiary centres in Nagpur, on

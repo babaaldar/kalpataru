@@ -5,7 +5,10 @@
  * 
  * @return connection or an error
  */
-
+if (!isset($_SESSION['login'])) {
+    header("Location: index.php");
+    exit();
+}
  function db_connect()
  {
      static $connection;

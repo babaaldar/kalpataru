@@ -5,8 +5,8 @@ session_start();  //session start
 
 date_default_timezone_set('Asia/Kolkata');
 $profilerootpath = '../include/profile/';
-//$con = mysqli_connect("localhost", "cas", "try", "complainbox");
-$con = mysqli_connect("localhost", "root", "","bahekar");
+$con = mysqli_connect("localhost", "root", "Admin@876", "bsh");
+//$con = mysqli_connect("localhost", "root", "","bahekar");
 // dd($con);
 
 if (mysqli_connect_errno()) {

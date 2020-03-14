@@ -7,7 +7,13 @@ include("include/connection.php");
     <?php
     include "include/html_head.php";
     require_once "include/functions.php";
-    // include("include/checkuser.php");
+    //include("include/checkuser.php");
+
+    if (!isset($_SESSION['login'])) {
+        header("Location: index.php");
+        exit();
+    }
+    
     ?>
 
 </head>

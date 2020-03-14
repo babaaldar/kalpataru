@@ -6,7 +6,7 @@
     include "include/connection.php";
     include "include/html_head.php";
     include "include/functions.php";
-    include "include/checkuser.php";
+    //include "include/checkuser.php";
 
     ?>
 </head>
@@ -16,6 +16,12 @@
     <?php
     include "include/nav_header.php";
     include "include/doctor_sidebar.php";
+    
+    if (!isset($_SESSION['login'])) {
+        header("Location: index.php");
+        exit();
+    }
+
     ?>
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->

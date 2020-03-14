@@ -6,7 +6,7 @@ include("include/connection.php");
 <head>
     <?php
     include "include/html_head.php";
-    include("include/checkuser.php");
+    // include("include/checkuser.php");
     ?>
     <link rel="stylesheet" href="./include/plugins/fontawesome-free/css/fontawesome.min.css">
 </head>
@@ -30,7 +30,7 @@ include("include/connection.php");
         </section>
         <?php
          $profilerootpath="include/profile/";
-         $pid=$_GET['pid'];
+         $pid=$_GET['.pid'];
          $sql_query="SELECT * FROM patient_details where pid='$pid'";
          $res_update = mysqli_query($con, $sql_query);
          while ($row = mysqli_fetch_assoc($res_update)) {

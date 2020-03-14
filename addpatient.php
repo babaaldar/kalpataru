@@ -6,6 +6,7 @@ include("include/connection.php");
 <head>
     <?php
     include "include/html_head.php";
+    require_once "include/functions.php";
     // include("include/checkuser.php");
     ?>
 
@@ -333,9 +334,9 @@ include "include/javascripts.php";
 
 <?php
 if (isset($_POST['add_patient'])) {
-    $uhidno = $_POST['uhidno'];
-    $ssano = $_POST['ssano'];
-    $adharnumber = $_POST['adharnumber'];
+    $uhidno =  sanitize_input($_POST['uhidno']);
+    $ssano =  sanitize_input($_POST['ssano']);
+    $adharnumber =  sanitize_input($_POST['adharnumber']);
 
       $profile = time().'_'.basename($_FILES['profile']['name']);
       $tmpFilePath = basename($_FILES['profile']['tmp_name']);
@@ -359,64 +360,62 @@ if (isset($_POST['add_patient'])) {
          else{
             $profile='default.png';
          }
-    $patientname = $_POST['patientname'];
-    $patientphone = $_POST['patientphone'];
-    $patientage = $_POST['patientage'];
-    $patientgender = $_POST['patientgender'];
-    $patientaddress = $_POST['patientaddress'];
-    $patientsymptoms = $_POST['patientsymptoms'];
+         $patientname =  sanitize_input($_POST['patientname']);
+         $patientphone =  sanitize_input($_POST['patientphone']);
+         $patientage =  sanitize_input($_POST['patientage']);
+         $patientgender =  sanitize_input($_POST['patientgender']);
+         $patientaddress =  sanitize_input($_POST['patientaddress']);
+         $patientsymptoms =  sanitize_input($_POST['patientsymptoms']);
+     
 
-
-    //=============checkbox isset=======================
-
-    if (isset($_POST['bpcheckbox'])) {
-        $bpcheckbox = $_POST['bpcheckbox'];
-    } else {
-        $bpcheckbox = '';
-    }
-
-    if (isset($_POST['sugarcheckbox'])) {
-        $sugarcheckbox = $_POST['sugarcheckbox'];
-    } else {
-        $sugarcheckbox = '';
-    }
-
-    if (isset($_POST['heartcheckbox'])) {
-        $heartcheckbox = $_POST['heartcheckbox'];
-    } else {
-        $heartcheckbox = '';
-    }
-
-    if (isset($_POST['kidneycheckbox'])) {
-        $kidneycheckbox = $_POST['kidneycheckbox'];
-    } else {
-        $kidneycheckbox = '';
-    }
-
-    if (isset($_POST['paralysischeckbox'])) {
-        $paralysischeckbox = $_POST['paralysischeckbox'];
-    } else {
-        $paralysischeckbox = '';
-    }
-
-    if (isset($_POST['thyroidcheckbox'])) {
-        $thyroidcheckbox = $_POST['thyroidcheckbox'];
-    } else {
-        $thyroidcheckbox = '';
-    }
-
-    //================================================
-
-
-    $patientdiagnosis = $_POST['patientdiagnosis'];
-    $patientbloodgroup = $_POST['patientbloodgroup'];
-    $patienthb = $_POST['patienthb'];
-    $patientkft = $_POST['patientkft'];
-    $patientecg = $_POST['patientecg'];
-    $patienteco = $_POST['patienteco'];
-    $patienttreatment = $_POST['patienttreatment'];
-    $patientpriscription = $_POST['patientpriscription'];
-    $patientspecialadvise = $_POST['patientspecialadvise'];
+         if (isset($_POST['bpcheckbox'])) {
+            $bpcheckbox = sanitize_input($_POST['bpcheckbox']);
+        } else {
+            $bpcheckbox = '';
+        }
+    
+        if (isset($_POST['sugarcheckbox'])) {
+            $sugarcheckbox =  sanitize_input($_POST['sugarcheckbox']);
+        } else {
+            $sugarcheckbox = '';
+        }
+    
+        if (isset($_POST['heartcheckbox'])) {
+            $heartcheckbox =  sanitize_input($_POST['heartcheckbox']);
+        } else {
+            $heartcheckbox = '';
+        }
+    
+        if (isset($_POST['kidneycheckbox'])) {
+            $kidneycheckbox =  sanitize_input($_POST['kidneycheckbox']);
+        } else {
+            $kidneycheckbox = '';
+        }
+    
+        if (isset($_POST['paralysischeckbox'])) {
+            $paralysischeckbox =  sanitize_input($_POST['paralysischeckbox']);
+        } else {
+            $paralysischeckbox = '';
+        }
+    
+        if (isset($_POST['thyroidcheckbox'])) {
+            $thyroidcheckbox =  sanitize_input($_POST['thyroidcheckbox']);
+        } else {
+            $thyroidcheckbox = '';
+        }
+    
+        //================================================
+    
+    
+        $patientdiagnosis = sanitize_input($_POST['patientdiagnosis']);
+        $patientbloodgroup = sanitize_input($_POST['patientbloodgroup']);
+        $patienthb = sanitize_input($_POST['patienthb']);
+        $patientkft = sanitize_input($_POST['patientkft']);
+        $patientecg = sanitize_input($_POST['patientecg']);
+        $patienteco = sanitize_input($_POST['patienteco']);
+        $patienttreatment = sanitize_input($_POST['patienttreatment']);
+        $patientpriscription = sanitize_input($_POST['patientpriscription']);
+        $patientspecialadvise = sanitize_input($_POST['patientspecialadvise']);
 
     $query = "INSERT INTO `patient_details` 
 (`uhidno`, `ssano`, `adharnumber`,`profile_p`, `patientname`, `patientphone`, `patientage`, `patientgender`, `patientaddress`, `patientsymptoms`, `bpcheckbox`, `sugarcheckbox`, `heartcheckbox`, `kidneycheckbox`, `paralysischeckbox`, `thyroidcheckbox`, `patientdiagnosis`, `patientbloodgroup`, `patienthb`, `patientkft`, `patientecg`, `patienteco`, `patienttreatment`, `patientpriscription`, `patientspecialadvise`) 

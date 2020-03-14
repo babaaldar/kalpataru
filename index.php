@@ -1,3 +1,11 @@
+<?php
+include "include/connection.php";
+include "include/html_head.php";
+if (isset($_SESSION['login'])) {
+    header("Location: addpatient.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +38,6 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css ">
 
-
     <!--Line Icons-->
     <link rel="stylesheet" href="css/line-icons/line-icons.css">
     <!-- Bootstrap CSS -->
@@ -56,13 +63,6 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css" media="screen and (max-width:768px)">
 
-
-    <?php
-
-    // include "include/connection.php";
-    // include "include/html_head.php";
-
-    ?>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40">

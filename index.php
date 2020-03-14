@@ -123,12 +123,12 @@
                     <form action="./verifyuser.php" method="POST" class="login-form">
                     
                     <div class="unameDiv" id="uname">
-                        <input type="text" class="uname" placeholder="Please enter your login id">
+                        <input type="text" class="uname" name="uname" placeholder="Please enter your login id">
                         <span class="fa fa-user fa-2x blue"></span>
                     </div>
                     
                     <div class="passwordDiv" id="password">
-                        <input type="password" class="password" placeholder="please enter your password">
+                        <input type="password" class="password" name="password" placeholder="please enter your password">
                         <span class="fa fa-lock fa-2x blue"></span>
                     </div>
 
